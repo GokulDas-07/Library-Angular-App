@@ -4,76 +4,15 @@
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
                 <label for=""  class="form-label"><h2>Books List</h2></label>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of books">
                     <div class="card">
-                        <img height="350px" src="https://th.bing.com/th/id/R.f130ff77f75101067d9cc5818e307ca7?rik=Fw6L%2bImNwU%2bSaw&riu=http%3a%2f%2ftesseraguild.com%2fwp-content%2fuploads%2f2018%2f06%2fHobbit.jpg&ehk=0xpERpQ3Zvv7CZHZts86OPPva7nqdaM33H9h%2b932pG0%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
+                        <img height="350px" src="{{i.image}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">The Hobbit</h5>
-                          <p class="card-text">Rs.519</p>
+                          <h5 class="card-title">{{i.title}}</h5>
+                          <p class="card-text">Rs.{{i.price}}</p>
                         </div>
                       </div>
                 </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="350px" src="https://i.pinimg.com/originals/0b/c8/b6/0bc8b6222b8ba11df18f0cfc05a56709.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Tolkien Hobbit</h5>
-                          <p class="card-text">Rs.699</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="350px" src="https://godofsmallthing.com/myfiles/2020/08/The-Man-who-Saw-Everything-Fiction-Book-1334x2048.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">The Man Who Saw Everything</h5>
-                          <p class="card-text">Rs.741</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="350px" src="https://th.bing.com/th/id/OIP.8cvwSTuzRrOmZh6Z7Zxf1gHaLH?pid=ImgDet&w=506&h=760&rs=1" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">The Family Next Door</h5>
-                          <p class="card-text">Rs.569</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="350px" src="https://i.ebayimg.com/images/g/GH0AAOSw1dVeamUv/s-l640.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">More Than a Whisper</h5>
-                          <p class="card-text">Rs.1110</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="350px" src="https://i.pinimg.com/736x/ea/44/bb/ea44bbf40100a0ad3c818ae2dd1bedd8--fiction-books-true-stories.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Harry a History</h5>
-                          <p class="card-text">Rs.1201</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="350px" src="https://th.bing.com/th/id/OIP.otlc9oZeLTyrh-A8AJDDugAAAA?pid=ImgDet&w=314&h=500&rs=1" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Twelfth Night</h5>
-                          <p class="card-text">Rs.911</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3"><div class="card">
-                    <img height="350px" src="https://i.pinimg.com/originals/29/7b/6c/297b6c191d9840135bac165819c01b84.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Watership Down</h5>
-                      <p class="card-text">Rs.511</p>
-                    </div>
-                  </div></div>
             </div>
         </div>
     </div>
