@@ -13,6 +13,7 @@ import { BookDeleteComponent } from './book-delete/book-delete.component';
 import { BookIssueComponent } from './book-issue/book-issue.component';
 import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
 import { NavbaruserComponent } from './navbaruser/navbaruser.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NavbaruserComponent } from './navbaruser/navbaruser.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
