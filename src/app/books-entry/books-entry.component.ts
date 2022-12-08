@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-books-entry',
@@ -7,21 +8,29 @@ import { Component } from '@angular/core';
 })
 export class BooksEntryComponent {
   title=""
-  author=""
-  description=""
-  publisher=""
-  language=""
-  distributor=""
-  release=""
-  price=""
   image=""
-
+  description=""
+  price=""
+  
+  constructor(private api:ApiService){}
 
   readValues=()=>
   {
-    let data:any={"title":this.title,"author":this.author,"description":this.description,"publisher":this.publisher,"language":this.language,
-    "distributor":this.distributor,"release":this.release,"price":this.price,"image":this.image}
-    console.log(data)
+    let data:any={"title":this.title,"image":this.image,"description":this.description,"price":this.price,}
+    this.api.addBook(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if(response.status=="success"){
+          alert("Book Added")
+          this.title=""
+          this.image=""
+          this.description=""
+          this.price=""
+        }else{
+          alert("Invalid Entry")
+        }
+      }
+    )
   }
 
 
