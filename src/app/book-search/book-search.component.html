@@ -3,18 +3,27 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
-                <label for=""  class="form-label"><h2>Search Book</h2></label>
+                <label for=""  class="form-label text-center"><h2>Search Book</h2></label>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                     <label for="" class="form-label">Book Title</label>
                     <input name="title" [(ngModel)]="title" type="text" class="form-control">
 
                 </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <button (click)="readValues()" class="btn btn-success">Search</button>
-
                 </div>
+                <div class="row g-3 mt-4">
+                    <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of searchData">
+                        <div class="card">
+                            <img height="350px" src="{{i.image}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{i.title}}</h5>
+                              <p class="card-text">{{i.description}}</p>
+                              <p class="card-text">Rs.{{i.price}}</p>
+                            </div>
+                          </div>
+                    </div>
             </div>
         </div>
     </div>

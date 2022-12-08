@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
@@ -9,10 +10,21 @@ export class UserLoginComponent {
   username=""
   password=""
 
-  readValues=()=>
+constructor(private route:Router){}
+
+readValues=()=>
+{
+  let data:any={"username":this.username,"password":this.password}
+  console.log(data)
+
+  if(this.username=="user" && this.password=="123")
   {
-    let data:any={"username":this.username,"password":this.password}
-    console.log(data)
+    this.route.navigate(['/search'])
+  } 
+  else
+  {
+    alert("Invalid User")
   }
+}
 
 }

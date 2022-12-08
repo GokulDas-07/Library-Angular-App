@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class UserRegistrationComponent {
   name=""
-  aadhar=""
   address=""
   phone=""
   mail=""
@@ -18,9 +17,22 @@ export class UserRegistrationComponent {
 
   readValues=()=>
   {
-    let data:any={"name":this.name,"aadhar":this.aadhar,"address":this.address,"phone":this.phone,"mail":this.mail,"dob":this.dob,
+    let data:any={"name":this.name,"address":this.address,"phone":this.phone,"mail":this.mail,"dob":this.dob,
   "username":this.username,"password":this.password,"confirm":this.confirm}
   console.log(data)
+  if(this.password==this.confirm){
+    alert("User Registered")
+    this.name=""
+    this.address=""
+    this.phone=""
+    this.mail=""
+    this.dob=""
+    this.username=""
+    this.password=""
+    this.confirm=""
+  }else{
+    alert("Password and Confirm password doesn't match")
+  }
   }
 
 }
